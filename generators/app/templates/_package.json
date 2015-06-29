@@ -1,0 +1,21 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.1",
+  "description": "<%= description %>",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "assetsmanager-brunch": "^1.8.1",
+    "auto-reload-brunch": "^1.7.8",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+    "css-brunch": ">= 1.0 < 1.8",
+    "jade-brunch": "^1.8.1",
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "static-jade-brunch": "^1.7.0",
+    "uglify-js-brunch": ">= 1.0 < 1.8"
+  },
+  "scripts": {
+    "start": "brunch watch --server",
+    "test": "brunch test"
+  }
+}

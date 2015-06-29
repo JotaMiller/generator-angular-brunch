@@ -10,14 +10,14 @@ module.exports = yeoman.generators.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      chalk.red('Controller') + ' generator!'
+      chalk.red('Service') + ' generator!'
     ));
 
     var prompts = [{
       type    : 'input',
       name    : 'name',
-      message : 'Controller name',
-      default : 'Main'
+      message : 'Service name',
+      default : 'User'
     }];
 
     this.prompt(prompts, function (props) {
@@ -31,8 +31,8 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     app: function () {
       this.fs.copyTpl(
-        this.templatePath('_controller.js'),
-        this.destinationPath('app/scripts/controllers/'+ this.props.name +'.js'),{
+        this.templatePath('_service.js'),
+        this.destinationPath('app/scripts/services/'+ this.props.name +'Service.js'),{
           name: this.props.name,
           appName: this.config.get('appName')
         }

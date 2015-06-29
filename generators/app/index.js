@@ -18,6 +18,7 @@ module.exports = yeoman.generators.Base.extend({
       type    : 'input',
       name    : 'name',
       message : 'Your project name',
+      store   : true,
       default : this.appname // Default to current folder name
     },
     {
@@ -41,35 +42,36 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath('package.json'),{
-          name: this.props.appname
+          name: this.appname,
+          description: this.props.description
         }
       );
       this.fs.copyTpl(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json'),{
-          name: this.props.appname
+          name: this.appname
         }
       );
       this.fs.copyTpl(
         this.templatePath('_brunch-config.coffee'),
         this.destinationPath('brunch-config.coffee'),{
-          name: this.props.appname
+          name: this.appname
         }
       );
       this.fs.copyTpl(
         this.templatePath('_README.md'),
         this.destinationPath('README.md'),{
-          name: this.props.appname,
+          name: this.appname,
           description: this.props.description
         }
       );
       this.fs.copyTpl(
         this.templatePath('_index.jade'),
         this.destinationPath('app/index.jade'),{
-          name: this.props.appname,
+          name: this.appname,
           appName: this.appname + 'App'
         }
-      )
+      );
     },
 
     projectfiles: function () {
@@ -92,6 +94,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function () {
+    this.config.set('appName', this.appname);
     this.installDependencies();
   }
 });

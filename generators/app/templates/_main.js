@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc function
- * @name <%= appName %>.controller:<%= name %>Ctrl
+ * @name <%= appName %>.controller:MainCtrl
  * @description
- * # <%= name %>Ctrl
+ * # MainCtrl
  * Controller of the <%= appName %>
  */
 angular.module('<%= appName %>')
-  .controller('<%= name %>Ctrl', function ($scope) {
+  .controller('MainCtrl', function ($scope) {
 
     $scope.controllerName = 'MainCtrl';
   

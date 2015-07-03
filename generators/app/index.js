@@ -3,6 +3,9 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 var mkdirp = require('mkdirp');
+var s = require("underscore.string");
+var slugify = require("underscore.string/slugify");
+var classify = require("underscore.string/classify");
 
 
 module.exports = yeoman.generators.Base.extend({
@@ -71,6 +74,22 @@ module.exports = yeoman.generators.Base.extend({
           name: this.appname,
           appName: this.appname + 'App'
         }
+      );
+      this.fs.copyTpl(
+        this.templatePath('_app.js'),
+        this.destinationPath('app/scripts/app.js'),{
+          appName: this.appname + 'App'
+        }
+      );
+      this.fs.copyTpl(
+        this.templatePath('_main.js'),
+        this.destinationPath('app/scripts/controllers/main.js'),{
+          appName: this.appname + 'App'
+        }
+      );
+      this.fs.copy(
+        this.templatePath('_main.jade'),
+        this.destinationPath('app/views/main.jade')
       );
     },
 

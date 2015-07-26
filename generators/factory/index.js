@@ -17,7 +17,7 @@ module.exports = yeoman.generators.Base.extend({
       type    : 'input',
       name    : 'name',
       message : 'Factory name',
-      default : 'User'
+      default : 'UserFactory'
     }];
 
     this.prompt(prompts, function (props) {
@@ -32,7 +32,7 @@ module.exports = yeoman.generators.Base.extend({
     app: function () {
       this.fs.copyTpl(
         this.templatePath('_factory.js'),
-        this.destinationPath('app/scripts/services/'+ this.props.name +'Factory.js'),{
+        this.destinationPath('app/scripts/services/'+ this.props.name +'.js'),{
           name: this.props.name,
           appName: this.config.get('appName')
         }

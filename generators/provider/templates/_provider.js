@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc service
- * @name <%= appName %>.<%= name %>Provider
+ * @name <%= appName %>.<%= name %>
  * @description
- * # <%= name %>Provider
+ * # <%= name %>
  * Provider in the <%= appName %>.
  */
 angular.module('<%= appName %>')
-  .provider('<%= name %>Provider', function () {
+  .provider('<%= name %>', function () {
 
     // Private variables
     var salutation = 'Hello';

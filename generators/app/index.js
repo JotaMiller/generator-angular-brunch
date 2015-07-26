@@ -45,46 +45,46 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath('package.json'),{
-          name: this.appname,
+          name: this.props.name,
           description: this.props.description
         }
       );
       this.fs.copyTpl(
         this.templatePath('_bower.json'),
         this.destinationPath('bower.json'),{
-          name: this.appname
+          name: this.props.name
         }
       );
       this.fs.copyTpl(
         this.templatePath('_brunch-config.coffee'),
         this.destinationPath('brunch-config.coffee'),{
-          name: this.appname
+          name: this.props.name
         }
       );
       this.fs.copyTpl(
         this.templatePath('_README.md'),
         this.destinationPath('README.md'),{
-          name: this.appname,
+          name: this.props.name,
           description: this.props.description
         }
       );
       this.fs.copyTpl(
         this.templatePath('_index.jade'),
         this.destinationPath('app/index.jade'),{
-          name: this.appname,
-          appName: this.appname + 'App'
+          name: this.props.name,
+          appName: this.props.name
         }
       );
       this.fs.copyTpl(
         this.templatePath('_app.js'),
         this.destinationPath('app/scripts/app.js'),{
-          appName: this.appname + 'App'
+          appName: this.props.name
         }
       );
       this.fs.copyTpl(
         this.templatePath('_main.js'),
         this.destinationPath('app/scripts/controllers/main.js'),{
-          appName: this.appname + 'App'
+          appName: this.props.name
         }
       );
       this.fs.copy(
@@ -113,7 +113,7 @@ module.exports = yeoman.generators.Base.extend({
   },
 
   install: function () {
-    this.config.set('appName', this.appname);
+    this.config.set('appName', this.props.name);
     this.installDependencies();
   }
 });

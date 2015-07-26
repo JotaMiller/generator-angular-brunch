@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc service
- * @name <%= appName %>.<%= name %>Factory
+ * @name <%= appName %>.<%= name %>
  * @description
- * # <%= name %>Factory
+ * # <%= name %>
  * Factory in the <%= appName %>.
  */
 angular.module('<%= appName %>')
-  .factory('<%= name %>Factory', function () {
+  .factory('<%= name %>', function () {
     // Service logic
     // ...
 

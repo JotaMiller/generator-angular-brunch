@@ -1,39 +1,33 @@
 # generator-angular-brunch [![Build Status](https://secure.travis-ci.org/JotaMiller/generator-angular-brunch.png?branch=master)](https://travis-ci.org/JotaMiller/generator-angular-brunch)
 
-> [Yeoman](http://yeoman.io) generator
+** Status: In development**
 
 
 ## Getting Started
 
-### What is Yeoman?
+### Install Yeoman and Generator
 
-Trick question. It's not a thing. It's this guy:
-
-![](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
 
 ```bash
-npm install -g yo
+npm install -g yo generator-angular-brunch
 ```
 
-### Yeoman Generators
+### Use
 
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
-
-To install generator-angular-brunch from npm, run:
+* Create a project directory
 
 ```bash
-npm install -g generator-angular-brunch
+mkdir project
+cd project
 ```
 
-Finally, initiate the generator:
+* Create project
 
 ```bash
 yo angular-brunch
 ```
+
+### Sub-generators
 
 Also, you have a series of sub-generators available:
 
@@ -61,6 +55,11 @@ yo angular-brunch:factory
 ```bash
 yo angular-brunch:provider
 ```
+
+
+## known Issues
+
+* [static-jade-brunch](https://github.com/ilkosta/static-jade-brunch): This library depends of **node 0.10** , if you have a later version, you'll get an error when running **brunch w**
 
 ## License
 

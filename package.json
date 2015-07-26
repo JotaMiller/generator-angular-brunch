@@ -1,6 +1,6 @@
 {
   "name": "generator-angular-brunch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "AngularJS, brunch, Jade templating and more...",
   "license": "MIT",
   "main": "app/index.js",

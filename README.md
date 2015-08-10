@@ -1,4 +1,4 @@
-# generator-angular-brunch [![Build Status](https://secure.travis-ci.org/JotaMiller/generator-angular-brunch.png?branch=master)](https://travis-ci.org/JotaMiller/generator-angular-brunch)
+# generator-angular-brunch [![Build Status](https://secure.travis-ci.org/JotaMiller/generator-angular-brunch.png?branch=master)](https://travis-ci.org/JotaMiller/generator-angular-brunch) [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/generator-angular-brunch)
 
 ** Status: In development**
 

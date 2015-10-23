@@ -57,10 +57,6 @@ yo angular-brunch:provider
 ```
 
 
-## known Issues
-
-* [static-jade-brunch](https://github.com/ilkosta/static-jade-brunch): This library depends of **node 0.10** , if you have a later version, you'll get an error when running **brunch w**
-
 ## License
 
 MIT
